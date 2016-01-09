@@ -1,5 +1,7 @@
-var tnChildDirectiveController = function ( ) {
-    console.log ( 'Running tnChildDirectiveController...' );
+var tnChildDirectiveController = function ( $scope ) {
+    this.scope = $scope;
+    this.data = this.scope.data;
+    console.info ( 'Running tnChildDirectiveController...' );
 };
 
 var tnChildDirective = function() {

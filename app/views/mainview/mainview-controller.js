@@ -1,8 +1,8 @@
 'use strict';
 
 var MainViewController = function ( ) {
-    console.info ( 'Inside MainView Controller Constructor' );
     this.childitems = [ 'Child Item 1', 'Child Item 2' ];
+    console.info ( 'Inside MainView Controller Constructor' );
 };
 
 angular.module ( 'testnest.MainViewModule',

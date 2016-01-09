@@ -4,9 +4,6 @@ var testnest = angular.module ( 'testnest',
 
     .config ( [ '$routeProvider',
         function ( $routeProvider ) {
-
-            console.info ( 'testnest.config is running...' );
-
             $routeProvider
                 .otherwise ( {
                     templateUrl: 'views/mainview/mainview.html',
