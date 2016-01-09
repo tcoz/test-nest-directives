@@ -1,0 +1,8 @@
+.someList {
+    background-color : #8fa9a6;
+    padding : 5px;
+}
+
+.someList > div {
+    background-color: #828cbc;
+}

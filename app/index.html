@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>Testing Nested Directives</title>
+    <link href="app.css" rel="stylesheet" />
+</head>
+
+<body ng-app="testnest">
+
+  <div ng-view></div>
+
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular_mocks.js"></script>
+  <script src="lib/angular_route.js"></script>
+  <script src="lib/jquery.js"></script>
+
+  <script src="app.js"></script>
+  <script src="views/mainview/mainview-controller.js"></script>
+  <script src="components/parent-directive/parent-directive.js"></script>
+  <script src="components/child-directive/child-directive.js"></script>
+
+</body>
+
+</html>
