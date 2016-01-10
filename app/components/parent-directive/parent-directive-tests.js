@@ -6,14 +6,16 @@ describe ( 'ParentDirectiveTests', function ( ) {
         'components/parent-directive/parent-directive-template.html',
         'components/child-directive/child-directive-template.html' ) );
 
-    var scope, elem, template, dirt, ctl;
+    var scope, elem, template, dirt, ctl, mainViewCtl;
 
-    beforeEach ( inject ( function ( $templateCache, $compile, $rootScope ) {
+    beforeEach ( inject ( function (
+        $controller, $templateCache, $compile, $rootScope ) {
         template = $templateCache.get ( 'components/parent-directive/parent-directive-template.html' );
         $templateCache.put ( 'components/parent-directive/parent-directive-template.html', template );
 
         scope = $rootScope;
-        scope.data = [ 'Val1', 'Val2' ];
+        mainViewCtl = $controller ( 'MainViewController', { $scope : scope } );
+        scope.data = mainViewCtl.childitems;
         elem = angular.element ( '<tn-parent-directive data="data"></tn-parent-directive>' );
         dirt = $compile ( elem ) ( scope );
         scope.$apply ( );
@@ -22,6 +24,11 @@ describe ( 'ParentDirectiveTests', function ( ) {
     }) );
 
     it ( '', function ( ) { console.info ( 'Running ParentDirective tests...') } );
+
+    it ( 'should have an array on the scope, which we set from the MainView controller',
+        function ( ) {
+            expect ( scope.data.length ).toBe ( 2 );
+        });
 
     it ( 'should have as many child items as it does scope.data.length',
         function ( ) {
