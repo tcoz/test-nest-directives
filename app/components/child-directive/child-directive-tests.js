@@ -6,8 +6,7 @@ describe ( 'ChildDirectiveTests', function ( ) {
     var scope, elem, template, dirt, ctl;
 
     beforeEach ( inject ( function ( $templateCache, $compile, $rootScope ) {
-        template = $templateCache.get ( 'components/child-directive/child-directive-template.html' );
-        $templateCache.put ( 'components/child-directive/child-directive-template.html', template );
+        $templateCache.get ( 'components/child-directive/child-directive-template.html' );
 
         scope = $rootScope;
         scope.data = 'TEST VALUE';

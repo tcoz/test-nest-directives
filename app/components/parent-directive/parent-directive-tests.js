@@ -10,8 +10,7 @@ describe ( 'ParentDirectiveTests', function ( ) {
 
     beforeEach ( inject ( function (
         $controller, $templateCache, $compile, $rootScope ) {
-        template = $templateCache.get ( 'components/parent-directive/parent-directive-template.html' );
-        $templateCache.put ( 'components/parent-directive/parent-directive-template.html', template );
+        $templateCache.get ( 'components/parent-directive/parent-directive-template.html' );
 
         scope = $rootScope;
         mainViewCtl = $controller ( 'MainViewController', { $scope : scope } );
